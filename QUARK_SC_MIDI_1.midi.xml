@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<MixxxControllerPreset mixxxVersion="1.11.0 beta" schemaVersion="1">
+<MixxxControllerPreset mixxxVersion="2.0.0" schemaVersion="1">
     <info>
         <name>QUARK</name>
         <author>Jakub Křižka</author>
@@ -8,17 +8,27 @@
     </info>
     <controller id="QUARK">
         <scriptfiles>
-            <file functionprefix="QUARK.js" filename="QUARK_SC.js"/>
+            <file functionprefix="QUARK.js" filename="QUARK.js"/>
         </scriptfiles>
         <controls>
             <control>
-                <group>[Channel4]</group>
-                <key>beatloop_4_toggle</key>
-                <description>MIDI Learned from 280 messages.</description>
-                <status>0x93</status>
-                <midino>0x1D</midino>
+                <group>[EqualizerRack1_[Channel1]_Effect1]</group>
+                <key>button_parameter1</key>
+                <description>MIDI Learned from 184 messages.</description>
+                <status>0x90</status>
+                <midino>0x0C</midino>
                 <options>
-                    <normal/>
+                    <switch/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>pregain</key>
+                <description>MIDI Learned from 326 messages.</description>
+                <status>0xB0</status>
+                <midino>0x09</midino>
+                <options>
+                    <soft-takeover/>
                 </options>
             </control>
             <control>
@@ -32,69 +42,48 @@
             </control>
             <control>
                 <group>[Channel1]</group>
-                <key>bpm_up</key>
-                <description>MIDI Learned from 228 messages.</description>
+                <key>rate_set_default</key>
                 <status>0x90</status>
-                <midino>0x33</midino>
+                <midino>0x76</midino>
                 <options>
                     <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[QuickEffectRack1_[Channel2]]</group>
+                <key>super1</key>
+                <description>MIDI Learned from 264 messages.</description>
+                <status>0xB7</status>
+                <midino>0x04</midino>
+                <options>
+                    <soft-takeover/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>pregain</key>
+                <description>MIDI Learned from 252 messages.</description>
+                <status>0xB1</status>
+                <midino>0x09</midino>
+                <options>
+                    <soft-takeover/>
                 </options>
             </control>
             <control>
                 <group>[Channel1]</group>
-                <key>beatloop_1_toggle</key>
-                <description>MIDI Learned from 72 messages.</description>
+                <key>hotcue_2_clear</key>
+                <description>MIDI Learned from 224 messages.</description>
                 <status>0x90</status>
-                <midino>0x17</midino>
+                <midino>0x5A</midino>
                 <options>
                     <normal/>
                 </options>
             </control>
             <control>
                 <group>[Channel2]</group>
-                <key>bpm_up</key>
-                <description>MIDI Learned from 222 messages.</description>
+                <key>bpm_up_small</key>
+                <description>MIDI Learned from 224 messages.</description>
                 <status>0x91</status>
-                <midino>0x33</midino>
-                <options>
-                    <normal/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>beatloop_1_toggle</key>
-                <description>MIDI Learned from 228 messages.</description>
-                <status>0x91</status>
-                <midino>0x17</midino>
-                <options>
-                    <normal/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>bpm_up</key>
-                <description>MIDI Learned from 416 messages.</description>
-                <status>0x92</status>
-                <midino>0x33</midino>
-                <options>
-                    <normal/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>beatloop_1_toggle</key>
-                <description>MIDI Learned from 276 messages.</description>
-                <status>0x92</status>
-                <midino>0x17</midino>
-                <options>
-                    <normal/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>bpm_up</key>
-                <description>MIDI Learned from 218 messages.</description>
-                <status>0x93</status>
                 <midino>0x33</midino>
                 <options>
                     <normal/>
@@ -121,16 +110,6 @@
                 </options>
             </control>
             <control>
-                <group>[Channel4]</group>
-                <key>beatloop_1_toggle</key>
-                <description>MIDI Learned from 264 messages.</description>
-                <status>0x93</status>
-                <midino>0x17</midino>
-                <options>
-                    <normal/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel3]</group>
                 <key>volume</key>
                 <description>MIDI Learned from 864 messages.</description>
@@ -152,18 +131,38 @@
             </control>
             <control>
                 <group>[Channel1]</group>
-                <key>bpm_down</key>
-                <description>MIDI Learned from 238 messages.</description>
-                <status>0x90</status>
-                <midino>0x32</midino>
+                <key>pitch</key>
+                <description>MIDI Learned from 226 messages.</description>
+                <status>0xB5</status>
+                <midino>0x03</midino>
                 <options>
-                    <normal/>
+                    <soft-takeover/>
+                </options>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel1]_Effect1]</group>
+                <key>button_parameter2</key>
+                <description>MIDI Learned from 216 messages.</description>
+                <status>0x90</status>
+                <midino>0x0B</midino>
+                <options>
+                    <switch/>
                 </options>
             </control>
             <control>
                 <group>[Channel2]</group>
-                <key>bpm_down</key>
-                <description>MIDI Learned from 232 messages.</description>
+                <key>pitch</key>
+                <description>MIDI Learned from 330 messages.</description>
+                <status>0xB7</status>
+                <midino>0x03</midino>
+                <options>
+                    <soft-takeover/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>bpm_down_small</key>
+                <description>MIDI Learned from 216 messages.</description>
                 <status>0x91</status>
                 <midino>0x32</midino>
                 <options>
@@ -171,21 +170,21 @@
                 </options>
             </control>
             <control>
-                <group>[Channel3]</group>
-                <key>bpm_down</key>
-                <description>MIDI Learned from 18 messages.</description>
-                <status>0x92</status>
-                <midino>0x32</midino>
+                <group>[Channel1]</group>
+                <key>beatloop_2_toggle</key>
+                <description>MIDI Learned from 216 messages.</description>
+                <status>0x90</status>
+                <midino>0x1B</midino>
                 <options>
                     <normal/>
                 </options>
             </control>
             <control>
-                <group>[Channel4]</group>
-                <key>bpm_down</key>
-                <description>MIDI Learned from 216 messages.</description>
-                <status>0x93</status>
-                <midino>0x32</midino>
+                <group>[Channel2]</group>
+                <key>beatloop_4_toggle</key>
+                <description>MIDI Learned from 5 messages.</description>
+                <status>0x91</status>
+                <midino>0x5E</midino>
                 <options>
                     <normal/>
                 </options>
@@ -201,41 +200,33 @@
                 </options>
             </control>
             <control>
-                <group>[Channel1]</group>
-                <key>beatloop_32_toggle</key>
-                <description>MIDI Learned from 264 messages.</description>
+                <group>[EqualizerRack1_[Channel1]_Effect1]</group>
+                <key>button_parameter3</key>
+                <description>MIDI Learned from 216 messages.</description>
                 <status>0x90</status>
-                <midino>0x26</midino>
+                <midino>0x0A</midino>
                 <options>
-                    <normal/>
+                    <switch/>
+                    <soft-takeover/>
                 </options>
             </control>
             <control>
-                <group>[Channel2]</group>
-                <key>beatloop_32_toggle</key>
-                <description>MIDI Learned from 308 messages.</description>
+                <group>[EqualizerRack1_[Channel2]_Effect1]</group>
+                <key>button_parameter3</key>
+                <description>MIDI Learned from 72 messages.</description>
                 <status>0x91</status>
-                <midino>0x26</midino>
+                <midino>0x0A</midino>
                 <options>
-                    <normal/>
+                    <switch/>
+                    <soft-takeover/>
                 </options>
             </control>
             <control>
-                <group>[Channel3]</group>
-                <key>beatloop_32_toggle</key>
-                <description>MIDI Learned from 228 messages.</description>
-                <status>0x92</status>
-                <midino>0x26</midino>
-                <options>
-                    <normal/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>beatloop_32_toggle</key>
-                <description>MIDI Learned from 408 messages.</description>
-                <status>0x93</status>
-                <midino>0x26</midino>
+                <group>[Channel1]</group>
+                <key>reverse</key>
+                <description>MIDI Learned from 216 messages.</description>
+                <status>0x90</status>
+                <midino>0x74</midino>
                 <options>
                     <normal/>
                 </options>
@@ -250,32 +241,12 @@
                 </options>
             </control>
             <control>
-                <group>[Channel1]</group>
-                <key>beatloop_8_toggle</key>
-                <description>MIDI Learned from 16 messages.</description>
-                <status>0x90</status>
-                <midino>0x20</midino>
-                <options>
-                    <normal/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel2]</group>
                 <key>QUARK.wheelTurn2</key>
                 <status>0xB1</status>
                 <midino>0x39</midino>
                 <options>
                     <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>beatloop_8_toggle</key>
-                <description>MIDI Learned from 234 messages.</description>
-                <status>0x91</status>
-                <midino>0x20</midino>
-                <options>
-                    <normal/>
                 </options>
             </control>
             <control>
@@ -288,16 +259,6 @@
                 </options>
             </control>
             <control>
-                <group>[Channel3]</group>
-                <key>beatloop_8_toggle</key>
-                <description>MIDI Learned from 8 messages.</description>
-                <status>0x92</status>
-                <midino>0x20</midino>
-                <options>
-                    <normal/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel4]</group>
                 <key>QUARK.wheelTurn4</key>
                 <status>0xB3</status>
@@ -307,11 +268,11 @@
                 </options>
             </control>
             <control>
-                <group>[Channel4]</group>
-                <key>beatloop_8_toggle</key>
-                <description>MIDI Learned from 300 messages.</description>
-                <status>0x93</status>
-                <midino>0x20</midino>
+                <group>[Channel1]</group>
+                <key>beatsync_tempo</key>
+                <description>MIDI Learned from 222 messages.</description>
+                <status>0x90</status>
+                <midino>0x36</midino>
                 <options>
                     <normal/>
                 </options>
@@ -323,12 +284,22 @@
                 <status>0xB0</status>
                 <midino>0x0C</midino>
                 <options>
+                    <soft-takeover/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>beatsync_tempo</key>
+                <description>MIDI Learned from 218 messages.</description>
+                <status>0x91</status>
+                <midino>0x36</midino>
+                <options>
                     <normal/>
                 </options>
             </control>
             <control>
                 <group>[Channel1]</group>
-                <key>beatloop_2_toggle</key>
+                <key>hotcue_2_activate</key>
                 <description>MIDI Learned from 216 messages.</description>
                 <status>0x90</status>
                 <midino>0x1A</midino>
@@ -343,17 +314,17 @@
                 <status>0xB1</status>
                 <midino>0x0C</midino>
                 <options>
-                    <normal/>
+                    <soft-takeover/>
                 </options>
             </control>
             <control>
-                <group>[Channel2]</group>
-                <key>beatloop_2_toggle</key>
-                <description>MIDI Learned from 238 messages.</description>
-                <status>0x91</status>
-                <midino>0x1A</midino>
+                <group>[Master]</group>
+                <key>gain</key>
+                <description>MIDI Learned from 278 messages.</description>
+                <status>0xB4</status>
+                <midino>0x01</midino>
                 <options>
-                    <normal/>
+                    <soft-takeover/>
                 </options>
             </control>
             <control>
@@ -362,16 +333,6 @@
                 <description>MIDI Learned from 255 messages.</description>
                 <status>0xB2</status>
                 <midino>0x0C</midino>
-                <options>
-                    <normal/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>beatloop_2_toggle</key>
-                <description>MIDI Learned from 238 messages.</description>
-                <status>0x92</status>
-                <midino>0x1A</midino>
                 <options>
                     <normal/>
                 </options>
@@ -387,11 +348,41 @@
                 </options>
             </control>
             <control>
-                <group>[Channel4]</group>
-                <key>beatloop_2_toggle</key>
-                <description>MIDI Learned from 286 messages.</description>
-                <status>0x93</status>
-                <midino>0x1A</midino>
+                <group>[Channel1]</group>
+                <key>hotcue_1_clear</key>
+                <description>MIDI Learned from 221 messages.</description>
+                <status>0x90</status>
+                <midino>0x57</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>bpm</key>
+                <description>MIDI Learned from 242 messages.</description>
+                <status>0xB0</status>
+                <midino>0x38</midino>
+                <options>
+                    <soft-takeover/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>bpm</key>
+                <description>MIDI Learned from 232 messages.</description>
+                <status>0xB1</status>
+                <midino>0x38</midino>
+                <options>
+                    <soft-takeover/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>cue_default</key>
+                <description>MIDI Learned from 222 messages.</description>
+                <status>0x90</status>
+                <midino>0x35</midino>
                 <options>
                     <normal/>
                 </options>
@@ -403,15 +394,15 @@
                 <status>0xB0</status>
                 <midino>0x0B</midino>
                 <options>
-                    <normal/>
+                    <soft-takeover/>
                 </options>
             </control>
             <control>
-                <group>[Master]</group>
-                <key>maximize_library</key>
-                <description>MIDI Learned from 220 messages.</description>
-                <status>0x94</status>
-                <midino>0x03</midino>
+                <group>[Channel2]</group>
+                <key>cue_default</key>
+                <description>MIDI Learned from 224 messages.</description>
+                <status>0x91</status>
+                <midino>0x35</midino>
                 <options>
                     <normal/>
                 </options>
@@ -422,6 +413,16 @@
                 <description>MIDI Learned from 225 messages.</description>
                 <status>0xB1</status>
                 <midino>0x0B</midino>
+                <options>
+                    <soft-takeover/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>sync_key</key>
+                <description>MIDI Learned from 218 messages.</description>
+                <status>0x95</status>
+                <midino>0x03</midino>
                 <options>
                     <normal/>
                 </options>
@@ -447,11 +448,21 @@
                 </options>
             </control>
             <control>
-                <group>[Channel1]</group>
-                <key>play</key>
-                <description>MIDI Learned from 216 messages.</description>
-                <status>0x90</status>
-                <midino>0x34</midino>
+                <group>[Channel2]</group>
+                <key>sync_key</key>
+                <description>MIDI Learned from 224 messages.</description>
+                <status>0x97</status>
+                <midino>0x03</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>beatloop_0.125_toggle</key>
+                <description>MIDI Learned from 2 messages.</description>
+                <status>0x91</status>
+                <midino>0x1E</midino>
                 <options>
                     <normal/>
                 </options>
@@ -462,6 +473,16 @@
                 <description>MIDI Learned from 240 messages.</description>
                 <status>0xB0</status>
                 <midino>0x0A</midino>
+                <options>
+                    <soft-takeover/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>play</key>
+                <description>MIDI Learned from 214 messages.</description>
+                <status>0x90</status>
+                <midino>0x34</midino>
                 <options>
                     <normal/>
                 </options>
@@ -493,7 +514,7 @@
                 <status>0xB1</status>
                 <midino>0x0A</midino>
                 <options>
-                    <normal/>
+                    <soft-takeover/>
                 </options>
             </control>
             <control>
@@ -538,61 +559,11 @@
             </control>
             <control>
                 <group>[Channel1]</group>
-                <key>beatloop_16_toggle</key>
-                <description>MIDI Learned from 234 messages.</description>
-                <status>0x90</status>
-                <midino>0x23</midino>
-                <options>
-                    <normal/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>beatloop_16_toggle</key>
-                <description>MIDI Learned from 380 messages.</description>
-                <status>0x91</status>
-                <midino>0x23</midino>
-                <options>
-                    <normal/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>beatloop_16_toggle</key>
-                <description>MIDI Learned from 240 messages.</description>
-                <status>0x92</status>
-                <midino>0x23</midino>
-                <options>
-                    <normal/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>beatloop_16_toggle</key>
-                <description>MIDI Learned from 320 messages.</description>
-                <status>0x93</status>
-                <midino>0x23</midino>
-                <options>
-                    <normal/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
                 <key>QUARK.shiftWheelTurn1</key>
                 <status>0xB0</status>
                 <midino>0x79</midino>
                 <options>
                     <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>beatloop_4_toggle</key>
-                <description>MIDI Learned from 230 messages.</description>
-                <status>0x90</status>
-                <midino>0x1D</midino>
-                <options>
-                    <normal/>
                 </options>
             </control>
             <control>
@@ -615,16 +586,6 @@
                 </options>
             </control>
             <control>
-                <group>[Channel2]</group>
-                <key>beatloop_4_toggle</key>
-                <description>MIDI Learned from 240 messages.</description>
-                <status>0x91</status>
-                <midino>0x1D</midino>
-                <options>
-                    <normal/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel3]</group>
                 <key>QUARK.shiftWheelTurn3</key>
                 <status>0xB2</status>
@@ -634,16 +595,25 @@
                 </options>
             </control>
             <control>
-                <group>[Channel3]</group>
-                <key>beatloop_4_toggle</key>
-                <description>MIDI Learned from 218 messages.</description>
-                <status>0x92</status>
-                <midino>0x1D</midino>
+                <group>[QuickEffectRack1_[Channel1]]</group>
+                <key>super1</key>
+                <description>MIDI Learned from 237 messages.</description>
+                <status>0xB5</status>
+                <midino>0x04</midino>
                 <options>
-                    <normal/>
+                    <soft-takeover/>
                 </options>
             </control>
         </controls>
-        <outputs/>
+        <outputs>
+            <output>
+                <group>[Channel1]</group>
+                <key>hotcue_2_enabled</key>
+                <status>0x90</status>
+                <midino>0x1A</midino>
+                <maximum>0.99</maximum>
+                <minimum>0.9</minimum>
+            </output>
+        </outputs>
     </controller>
 </MixxxControllerPreset>
