@@ -2,17 +2,48 @@
 
 var QUARK = {};
 
+// QUARK.leds={
+//     cue: 0x35,
+// }
+script.debug("INIT QUARK");
+
+QUARK.offAllLEDS = function ()
+{
+    for (var i = 1; i <= 300; i++) {
+        midi.sendShortMsg(0x90, i, 0x00);
+    }
+}
+
 QUARK.init = function (id, debugging) {
     // turn on all LEDs
-    for (var i = 1; i <= 30; i++) { // Repeat the following code for the numbers 1 through 40
-                                // see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for
-        midi.sendShortMsg(0x90, i, 0x7f);
-    }
+    // for (var i = 1; i <= 300; i++) {
+        // midi.sendShortMsg(0x90, i, 0x7f);
+        // SleepForMilliseconds(100);
+        // }
+    midi.sendShortMsg(0x90, 0x35, 0x00);
+    midi.sendShortMsg(0x91, 0x35, 0x7f);
+    midi.sendShortMsg(0x90, 0x17, 0x7f);
+    midi.sendShortMsg(0x90, 0x1A, 0x7f);
+    midi.sendShortMsg(0x90, 0x1D, 0x7f);
+    QUARK.offAllLEDS();
+    // var i=0;
+    // engine.beginTimer(1000, function() {
+    //         midi.sendShortMsg(0x90, i++, 0x7f);
+    //         if (i>=20)
+    //             QUARK.offAllLEDS();
+    // })
+    
+    // engine.beginTimer(3000, function() {
+    //     for (var i = 1; i <= 300; i++) {
+    //         midi.sendShortMsg(0x90, i, 0x00);
+    //     }
+    // }, true)
+
 }
  
 QUARK.shutdown = function() {
    // turn off all LEDs
-   for (var i = 1; i <= 30; i++) {
+   for (var i = 1; i <= 40; i++) {
         midi.sendShortMsg(0x90, i, 0x00);
     }
 }
@@ -24,7 +55,7 @@ QUARK.shutdown = function() {
 
    // midi.sendShortMsg(0x90, 0x34, 0x00); 
   
-        midi.sendShortMsg(0x90, 0x4A, 0x7f);
+    midi.sendShortMsg(0x90, 0x4A, 0x7f);
    
 
 
