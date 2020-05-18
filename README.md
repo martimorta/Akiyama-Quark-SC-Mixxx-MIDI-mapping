@@ -1,9 +1,14 @@
-# Akiyama-Quark-SC-Mixxx-MIDI-mapping
+# Akiyama Quark SC MIDI Mapping for Mixxx
 
 ## Docs
-Manuals for both Mixxx and Quark SC are available in the folder docs
 
-http://www.mixxx.org
+### Mixxx
+
+The latest version of Mixxx docs is available at https://mixxx.org/manual/latest/en/
+
+### Quark SC
+
+The manual for Quark SC with its MIDI mapping is available in the folder docs
 
 > Note: This used to be the url from Akiyama DJ but it is not active anymore
 >
