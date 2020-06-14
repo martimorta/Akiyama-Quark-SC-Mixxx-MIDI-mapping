@@ -5,7 +5,6 @@ var QUARK = {};
 // QUARK.leds={
 //     cue: 0x35,
 // }
-// script.debug("INIT QUARK");
 
 // QUARK.offAllLEDS = function ()
 // {
@@ -14,7 +13,9 @@ var QUARK = {};
 //     }
 // }
 
-QUARK.init = function (id, debugging) {
+QUARK.init = function (id, debugging) 
+{
+    script.debug("INIT QUARK");
     // turn on all LEDs
     // for (var i = 1; i <= 300; i++) {
         // midi.sendShortMsg(0x90, i, 0x7f);
