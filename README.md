@@ -28,6 +28,20 @@ Mac
 
     /Users/xxxx/Library/Application\ Support/Mixxx/controllers 
 
+## Development
+
+Edit QUARK_SC.js and QUARK.midi.xml files and copy as explained above.
+
+Start Mixxx in debug mode
+
+PowerShell
+
+    & 'C:\Program Files\Mixxx\mixxx.exe' -debugmode
+
+### VS Code
+
+Use launch.json and tasks.json files to run the copy script using Ctrl+F5
+
 ## About
 
 Original author [Jakub Křižka](https://github.com/JakubKrizka) 
