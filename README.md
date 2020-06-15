@@ -32,15 +32,37 @@ Mac
 
 Edit QUARK_SC.js and QUARK.midi.xml files and copy as explained above.
 
-Start Mixxx in debug mode
-
-PowerShell
-
-    & 'C:\Program Files\Mixxx\mixxx.exe' -debugmode
-
 ### VS Code
 
 Use launch.json and tasks.json files to run the copy script using Ctrl+F5
+
+The batch script will copy from the repo to the controllers folder, in the case of mappings will copy both ways.
+
+### Start Mixxx in debug mode
+
+PowerShell
+
+    & 'C:\Program Files\Mixxx\mixxx.exe' --controllerDebug --developer
+
+### Learning MIDI controls
+
+From [Mixxx latest Manual](https://mixxx.org/manual/latest/en-GB/chapters/advanced_topics.html#adding-support-for-your-midi-hid-controller)
+The Controller wizard saves the new preset to the following file paths:
+
+Linux: 
+
+    /home/<username>/.mixxx/controllers
+
+macOS: 
+
+    /Users/<username>/Library/Application\ Support/Mixxx/controllers
+
+Windows: 
+
+    %LOCALAPPDATA%\Mixxx\controllers
+
+%LOCALAPPDATA%\Mixxx\controllers
+
 
 ## About
 
