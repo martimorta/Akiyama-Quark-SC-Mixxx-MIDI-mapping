@@ -2,25 +2,26 @@
 
 var QUARK = {};
 
-// QUARK.leds={
-//     cue: 0x35,
-// }
+QUARK.leds={
+    cue: 0x35,
+}
 
-// QUARK.offAllLEDS = function ()
-// {
-//     for (var i = 1; i <= 300; i++) {
-//         midi.sendShortMsg(0x90, i, 0x00);
-//     }
-// }
+QUARK.offAllLEDS = function ()
+{
+    for (var i = 1; i <= 300; i++) {
+        midi.sendShortMsg(0x90, i, 0x00);
+    }
+}
 
 QUARK.init = function (id, debugging) 
 {
     script.debug("INIT QUARK");
     // turn on all LEDs
-    // for (var i = 1; i <= 300; i++) {
-        // midi.sendShortMsg(0x90, i, 0x7f);
-        // SleepForMilliseconds(100);
-        // }
+    for (var i = 1; i <= 300; i++)
+    {        
+        midi.sendShortMsg(0x90, i, 0x7f);
+        SleepForMilliseconds(100);
+    }
     // midi.sendShortMsg(0x90, 0x35, 0x00);
     // midi.sendShortMsg(0x91, 0x35, 0x7f);
     // midi.sendShortMsg(0x90, 0x17, 0x7f);
