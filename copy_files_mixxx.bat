@@ -1,2 +1,18 @@
 COPY QUARK_SC.js ..
-COPY QUARK_SC.midi.xml ..
+SET FILE_DEV=QUARK_SC.midi.xml
+SET FILE_MIXXX=..\QUARK_SC.midi.xml
+FOR %%i IN (%FILE_DEV%) DO SET DATE1=%%~ti
+FOR %%i IN (%FILE_MIXXX%) DO SET DATE2=%%~ti
+IF "%DATE1%"=="%DATE2%" ECHO Files have same age && GOTO END
+IF "%DATE1%" geq "%DATE2%" ECHO File %FILE_DEV% is newer && GOTO COPY_UP
+IF "%DATE2%" geq "%DATE1%" ECHO File %FILE_MIXXX% is newer && GOTO COPY_DOWN
+:COPY_UP
+ECHO Copy up %FILE_DEV% ..
+COPY %FILE_DEV% ..
+GOTO END
+:COPY_DOWN
+ECHO Copy down %FILE_MIXXX% .
+COPY %FILE_MIXXX% .
+GOTO END
+:END
+ECHO End of copy script
